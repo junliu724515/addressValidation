@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes">
+	
+    <aura:handler event="c:AddressInfo" action="{!c.markMap}"/>
+    <aura:attribute name="map" type="Object"/>
+    <aura:attribute name="width" type="String" default="700"/>
+     <aura:attribute name="height" type="String" default="400"/>
+    
+    <ltng:require styles="/resource/address_leaflet/leaflet.css"
+              scripts="/resource/address_leaflet/leaflet.js"
+              afterScriptsLoaded="{!c.jsLoaded}" />
+    <div id="map" style="{!'width:'+v.width+'px;height:'+v.height+'px;'}"></div>
+</aura:component>

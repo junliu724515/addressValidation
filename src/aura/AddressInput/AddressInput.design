@@ -1,0 +1,5 @@
+<design:component>
+	<design:attribute name="apikey" label="Google API Key" description="Google API Key"/>
+    <design:attribute name="types" label="Types" description="types"/>
+    <design:attribute name="components" label="Components" description="Components"/>
+</design:component>

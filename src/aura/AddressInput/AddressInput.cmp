@@ -1,0 +1,53 @@
+<aura:component controller="AddressInputController" implements="flexipage:availableForAllPageTypes,force:appHostable,forceCommunity:availableForAllPageTypes">
+	<aura:attribute name="addresses" type="String[]"/>
+    <aura:attribute name="apikey" type="String" default="AIzaSyAR5r8p60jHH0LuvmZGIqULV3adYc2Wx-c"/>
+    <aura:attribute name="types" type="String" default="geocode"/>
+    <aura:attribute name="components" type="String" default="country:au"/>
+    <aura:attribute name="selectAddress" type="String"/>
+    
+    <ltng:require styles="/resource/address_SLDS/assets/styles/salesforce-lightning-design-system-ltng.css"
+                  scripts="/resource/address_jq, /resource/address_jq_ui" afterScriptsLoaded="{!c.jsLoaded}"/>
+    <style>
+
+    
+    </style>
+    
+    
+    
+    
+    <div class="slds">
+
+    
+    <div class="slds-lookup" data-select="single" data-scope="single" data-typeahead="false">
+        <div class="slds-form-element">
+          <label class="slds-text-heading--label" for="lookup">New Address</label>
+          <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right">
+              <div onclick="{!c.saveSelectedAddress}">
+                  <c:AddressSVG ariaHidden="true" class="slds-input__icon slds-icon-text-default" 
+                            xlinkHref="{!$SfdcSite.pathPrefix+'/resource/address_SLDS/assets/icons/utility-sprite/svg/symbols.svg#add'}"/>
+              </div>
+            <div class="slds-pill_container slds-hide">
+ 
+            </div>
+            <input id="lookup" class="slds-input slds-show" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" onkeyup="{!c.autoCompelte}" value="{!v.selectAddress}"/>
+           </div>
+        </div>
+        <div id="look_menu" class="slds-lookup__menu" role="listbox">
+            <ul class="slds-lookup__list" role="presentation">
+           <aura:iteration items="{!v.addresses}" var="address">
+                
+          <li class="slds-lookup__item">
+          <a id="s01" href="#void" role="option" addressvalue="{!address}" onclick="{!c.selectAddress}">
+              <c:AddressSVG ariaHidden="true" class="slds-icon slds-icon-standard-account slds-icon--small" 
+                          xlinkHref="{!$SfdcSite.pathPrefix + '/resource/address_SLDS/assets/icons/standard-sprite/svg/symbols.svg#account'}" />{!address}</a>
+           </li>
+          </aura:iteration>
+      </ul>
+            
+        </div>
+    
+    
+  </div>
+        </div>
+    
+</aura:component>
