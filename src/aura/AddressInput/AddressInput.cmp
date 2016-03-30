@@ -6,7 +6,7 @@
     <aura:attribute name="selectAddress" type="String"/>
     
     <ltng:require styles="/resource/address_SLDS/assets/styles/salesforce-lightning-design-system-ltng.css"
-                  scripts="/resource/address_jq, /resource/address_jq_ui" afterScriptsLoaded="{!c.jsLoaded}"/>
+                  scripts="/resource/address_jq" afterScriptsLoaded="{!c.jsLoaded}"/>
     <style>
 
     

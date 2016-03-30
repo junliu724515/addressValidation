@@ -19,5 +19,10 @@
         <members>googlemapapi</members>
         <name>RemoteSiteSetting</name>
     </types>
-    <version>34.0</version>
+    <types>
+        <members>address_SLDS</members>
+        <members>address_jq</members>
+        <name>StaticResource</name>
+    </types>
+    <version>36.0</version>
 </Package>
