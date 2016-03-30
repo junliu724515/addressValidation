@@ -22,6 +22,7 @@
     <types>
         <members>address_SLDS</members>
         <members>address_jq</members>
+        <members>address_leaflet</members>
         <name>StaticResource</name>
     </types>
     <version>36.0</version>
