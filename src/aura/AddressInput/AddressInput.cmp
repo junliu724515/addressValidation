@@ -29,7 +29,7 @@
             <div class="slds-pill_container slds-hide">
  
             </div>
-            <input id="lookup" class="slds-input slds-show" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" onkeyup="{!c.autoCompelte}" value="{!v.selectAddress}"/>
+            <input id="lookup" class="slds-input slds-show" type="text" aria-autocomplete="list" role="combobox" aria-expanded="true" aria-activedescendant="" onblur="{!c.autoCompelte}" value="{!v.selectAddress}"/>
            </div>
         </div>
         <div id="look_menu" class="slds-lookup__menu" role="listbox">
